@@ -1,0 +1,417 @@
+﻿@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/satoshi-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/satoshi-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/satoshi-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/satoshi/satoshi-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --pilkasis-primary: #0056a7;
+}
+
+html,
+body {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.brand-link.brand-pilkasis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 57px;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand-logo-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.brand-logo-full {
+    display: block;
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+    aspect-ratio: 4 / 1;
+}
+
+.brand-logo-icon {
+    display: none;
+    width: 28px;
+    height: 28px;
+}
+
+body.sidebar-collapse .brand-link.brand-pilkasis {
+    padding-right: 0;
+    padding-left: 0;
+    background: transparent;
+}
+
+body.sidebar-collapse .brand-logo-panel {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+body.sidebar-collapse .brand-logo-full,
+body.sidebar-collapse .brand-logo-icon {
+    display: none;
+}
+
+body.sidebar-collapse .brand-logo-icon {
+    display: block;
+}
+
+body.sidebar-collapse .main-sidebar:hover .brand-logo-panel {
+    width: 100%;
+    height: auto;
+    padding: 0.25rem 0.6rem;
+}
+
+body.sidebar-collapse .main-sidebar:hover .brand-link.brand-pilkasis {
+    padding: 0.6rem 0.75rem;
+}
+
+body.sidebar-collapse .main-sidebar:hover .brand-logo-full {
+    display: block;
+}
+
+body.sidebar-collapse .main-sidebar:hover .brand-logo-icon {
+    display: none;
+}
+.nav-sidebar .nav-link > .nav-icon {
+    width: 1.5rem;
+    margin-right: 0.7rem;
+    text-align: center;
+}
+
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: var(--pilkasis-primary);
+    color: #fff;
+}
+
+.content-header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.table-actions {
+    white-space: nowrap;
+}
+
+.card-tools > .btn + .btn {
+    margin-left: 0.35rem;
+}
+
+.table thead th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table thead th.sortable {
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.table thead th.sortable:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.sort-icon {
+    margin-left: 0.35rem;
+}
+
+.per-page-select {
+    width: auto;
+    min-width: 0;
+}
+
+.candidate-photo-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #f1f3f5;
+    overflow: hidden;
+}
+
+.candidate-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.candidate-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f3f5;
+    color: #adb5bd;
+    font-size: 3rem;
+}
+
+.candidate-number {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.candidate-card .candidate-photo-wrapper {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.candidate-richtext {
+    max-height: 140px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+}
+
+.candidate-richtext p,
+.candidate-richtext ul,
+.candidate-richtext ol {
+    margin-bottom: 0.4rem;
+}
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+
+body.login-page {
+    background: linear-gradient(135deg, #e8f0fe 0%, #f4f6f9 55%, #dbe7fb 100%);
+}
+
+.login-box-pilkasis {
+    width: 400px;
+    max-width: 92%;
+}
+
+.login-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 63, 150, 0.12);
+}
+
+.login-card-header {
+    padding: 1.5rem 1.5rem 1rem;
+    border-bottom: 0;
+}
+
+.login-brand {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.login-title {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.login-copyright {
+    margin: 1rem 0 0;
+}
+
+.password-toggle {
+    min-width: 42px;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.password-toggle:hover {
+    color: #007bff;
+}
+
+.login-card .icheck-primary label {
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.page-link {
+    cursor: pointer;
+}
+
+.search-input {
+    width: 260px;
+    max-width: 100%;
+}
+
+.status-toggle .btn input[type='radio'] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.table thead th.action-column {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.dashboard-candidate + .dashboard-candidate {
+    margin-top: 1.25rem;
+}
+
+.dashboard-candidate-photo {
+    display: flex;
+    flex: 0 0 96px;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 72px;
+    margin-right: 1rem;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    background-color: #f4f6f9;
+}
+
+.dashboard-candidate-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.min-width-0 {
+    min-width: 0;
+}
+
+.dashboard-info dt {
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.dashboard-info dd {
+    margin-bottom: 0.75rem;
+}
+
+.no-election-alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 0;
+    border-left: 4px solid #e0a800;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.no-election-alert-body {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.no-election-alert-icon {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.no-election-alert h5 {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.no-election-alert-action {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.alert.no-election-alert a.no-election-alert-action,
+.alert.no-election-alert a.no-election-alert-action:hover,
+.alert.no-election-alert a.no-election-alert-action:focus {
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+    .no-election-alert {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .no-election-alert-action {
+        width: 100%;
+    }
+}
+
+.results-chart {
+    position: relative;
+    height: 320px;
+}
+
+.small-box-note {
+    cursor: default;
+}
+
+.small-box > .small-box-note:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+}
+

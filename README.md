@@ -1,4 +1,4 @@
-# Pilkasis
+# PILKASIS - Aplikasi Pemilihan Ketua OSIS
 
 Pilkasis adalah aplikasi web untuk mengelola pemilihan di sekolah dan melakukan pemungutan suara secara daring. Aplikasi menggunakan Laravel 13, Inertia.js 3, Vue 3, dan MySQL.
 

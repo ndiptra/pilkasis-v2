@@ -236,46 +236,53 @@ body.login-page {
 }
 
 body.login-page {
+    display: block;
+    width: 100%;
     height: auto;
     min-height: 100vh;
     min-height: 100dvh;
-    padding: 1.5rem 0.75rem;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.login-box-pilkasis {
-    width: 400px;
-    max-width: 100%;
     margin: 0;
+    padding: 0;
 }
 
-.login-box-pilkasis .login-card-body {
+body.login-page > #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+}
+
+body.login-page .login-box.login-box-pilkasis {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+body.login-page .login-box-pilkasis .login-card-body {
     padding: 1.25rem 1.5rem 1.5rem;
 }
 
-.login-box-pilkasis .login-box-msg {
+body.login-page .login-box-pilkasis .login-box-msg {
     padding-right: 0;
     padding-left: 0;
 }
 
-.login-box-pilkasis .input-group {
-    flex-wrap: nowrap;
+body.login-page .login-box-pilkasis .input-group {
+    flex-wrap: wrap;
 }
 
-.login-box-pilkasis .input-group > .invalid-feedback {
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-
-.login-box-pilkasis .form-group:has(.invalid-feedback) {
-    margin-bottom: 1.6rem;
+body.login-page .login-box-pilkasis .input-group > .form-control {
+    min-width: 0;
 }
 
 @media (max-width: 575.98px) {
-    body.login-page {
-        padding-top: 1rem;
+    body.login-page > #app {
+        padding: 1rem 0.75rem;
     }
 
     .login-box-pilkasis .login-card-header {

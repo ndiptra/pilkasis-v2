@@ -22,7 +22,7 @@ const pageLabel = (link, index) => {
 </script>
 
 <template>
-    <div class="d-flex flex-wrap justify-content-between align-items-center">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mt-2">
         <small class="text-muted mb-2 mb-sm-0">
             Menampilkan {{ paginator.from ?? 0 }} - {{ paginator.to ?? 0 }} dari {{ paginator.total }} data
         </small>

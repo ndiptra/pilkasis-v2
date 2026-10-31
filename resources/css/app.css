@@ -406,6 +406,121 @@ body.login-page {
     height: 320px;
 }
 
+.content-wrapper,
+.content-wrapper .content,
+.content-wrapper .card,
+.content-wrapper .card-body {
+    min-width: 0;
+}
+
+.content-wrapper .card-body img {
+    max-width: 100%;
+}
+
+.pagination {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767.98px) {
+    .content-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .content-header .breadcrumb {
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+        padding-left: 0;
+        background: transparent;
+    }
+
+    .card-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .card-header::after {
+        display: none;
+    }
+
+    .card-header .card-title {
+        float: none;
+        flex: 1 1 100%;
+    }
+
+    .card-header .card-tools {
+        display: flex;
+        flex: 1 1 100%;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        float: none;
+        margin: 0;
+    }
+
+    .card-tools > .btn + .btn {
+        margin-left: 0;
+    }
+
+    .card-header .card-tools > .btn:not(.btn-tool) {
+        flex: 1 1 auto;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .per-page-bar > .search-input,
+    .per-page-bar > input {
+        flex: 1 1 100%;
+        margin-top: 0.5rem;
+    }
+
+    .table td,
+    .table th {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+
+    .results-chart {
+        height: 240px;
+    }
+
+    .dashboard-candidate-photo {
+        flex-basis: 72px;
+        width: 72px;
+        height: 56px;
+        margin-right: 0.75rem;
+    }
+
+    .main-footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .small-box h3 {
+        font-size: 1.6rem;
+    }
+
+    .small-box p {
+        font-size: 0.9rem;
+    }
+
+    .navbar-expand .container {
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    .info-box {
+        min-height: 70px;
+    }
+}
+
 .small-box-note {
     cursor: default;
 }

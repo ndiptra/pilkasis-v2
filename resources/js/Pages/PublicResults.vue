@@ -109,7 +109,7 @@ onMounted(() => {
                                     <i v-else class="fas fa-user-tie"></i>
                                 </div>
                                 <div class="public-result-body">
-                                    <div class="d-flex justify-content-between align-items-baseline">
+                                    <div class="d-flex flex-wrap justify-content-between align-items-baseline">
                                         <div>
                                             <strong>Paslon {{ item.order_number }}</strong>
                                             <span class="text-muted">

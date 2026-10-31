@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, watch } from 'vue';
 import { Link, router, usePage } from '@inertiajs/vue3';
 import logoUrl from '../../images/logo.png';
 import logoIconUrl from '../../images/logo-icon.png';
@@ -28,10 +28,22 @@ const logout = () => {
     router.post('/logout');
 };
 
+let removeNavigateListener = null;
+
 onMounted(() => {
     const body = document.body;
     body.classList.add('hold-transition', 'layout-fixed');
     body.classList.remove('login-page', 'layout-top-nav');
+
+    removeNavigateListener = router.on('navigate', () => {
+        if (document.body.classList.contains('sidebar-open')) {
+            document.getElementById('sidebar-overlay')?.click();
+        }
+    });
+});
+
+onBeforeUnmount(() => {
+    removeNavigateListener?.();
 });
 
 watch(

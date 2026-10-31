@@ -27,15 +27,15 @@ const change = () => {
 </script>
 
 <template>
-    <div class="d-flex flex-wrap align-items-center justify-content-between mb-2">
+    <div class="d-flex flex-wrap align-items-center justify-content-between mb-2 per-page-bar">
         <div class="d-flex align-items-center mr-3">
-        <small class="text-muted mr-2">Tampilkan</small>
-        <select v-model="current" class="custom-select custom-select-sm per-page-select" @change="change">
-            <option v-for="option in options" :key="option.value" :value="option.value">
-                {{ option.label }}
-            </option>
-        </select>
-        <small class="text-muted ml-2">data</small>
+            <small class="text-muted mr-2">Tampilkan</small>
+            <select v-model="current" class="custom-select custom-select-sm per-page-select" @change="change">
+                <option v-for="option in options" :key="option.value" :value="option.value">
+                    {{ option.label }}
+                </option>
+            </select>
+            <small class="text-muted ml-2">data</small>
         </div>
         <slot />
     </div>

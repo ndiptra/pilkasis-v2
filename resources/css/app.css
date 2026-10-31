@@ -235,9 +235,70 @@ body.login-page {
     background: linear-gradient(135deg, #e8f0fe 0%, #f4f6f9 55%, #dbe7fb 100%);
 }
 
+body.login-page {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 1.5rem 0.75rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .login-box-pilkasis {
     width: 400px;
-    max-width: 92%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.login-box-pilkasis .login-card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.login-box-pilkasis .login-box-msg {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.login-box-pilkasis .input-group {
+    flex-wrap: nowrap;
+}
+
+.login-box-pilkasis .input-group > .invalid-feedback {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.login-box-pilkasis .form-group:has(.invalid-feedback) {
+    margin-bottom: 1.6rem;
+}
+
+@media (max-width: 575.98px) {
+    body.login-page {
+        padding-top: 1rem;
+    }
+
+    .login-box-pilkasis .login-card-header {
+        padding: 1.25rem 1rem 0.75rem;
+    }
+
+    .login-box-pilkasis .login-card-body {
+        padding: 1rem 1.1rem 1.25rem;
+    }
+
+    .login-brand {
+        max-width: 220px;
+    }
+
+    .login-box-pilkasis .alert {
+        padding: 0.65rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .login-box-pilkasis .form-control,
+    .login-box-pilkasis .btn {
+        font-size: 1rem;
+    }
 }
 
 .login-card {
